@@ -1,8 +1,24 @@
+/*GENERAL*/
 *{
 	margin: 0;
 	padding: 0;
 }
 
+@font-face {
+	font-family: "titlesfont";
+	src: url(res/fonts/mechanoid.ttf);
+}
+
+@font-face {
+	font-family: "pfont";
+	src: url(res/fonts/Mecha.ttf);
+}
+
+p{
+	font-family: "pfont";
+}
+
+/*MAIN*/
 main{
 	display: flex;
 	flex-direction: column;
@@ -14,7 +30,7 @@ body{
 
 header{
 	text-align: center;
-	background: url(./res/header.jpg);
+	background: url(./res/web/header.jpg);
 	background-size: cover;
 	background-position: 0 -80px;
 	width: 100%;
@@ -28,6 +44,9 @@ header{
 header>h1{
 	background-color: black;
 	width: 100%;
+	font-family: "titlesfont";
+	font-size: 2em;
+	font-weight: 100;
 }
 
 .selectorcontent{
@@ -116,6 +135,11 @@ button:hover{
 	border: solid 1px wheat;
 	margin: 10px;
 	width: 80%;
+}
+
+.textArea>h3{
+	font-family: "titlesfont";
+	font-weight: 50;
 }
 
 /*FOOTER*/
