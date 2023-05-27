@@ -83,6 +83,7 @@ input[type="checkbox"]{
 .right{
 	right: 0;
 	background-color: red;
+	color: white;
 }
 
 button{
