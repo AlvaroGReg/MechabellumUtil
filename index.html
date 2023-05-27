@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>MECHABELLUM UTIL BY AGREG</title>
+</head>
+
+<body>
+	<header>
+		<h1>MECHABELLUM TOOL TO CALCULATE BEST MECHAS VS OPPONENT BUILD</h1>
+	</header>
+	<main>
+		<section class="selectorcontent">
+
+			<div class="tankscontainer" id="tankscontainer">
+				<div class="container" id="topcontainer">
+
+					<div class="robotdiv">
+						<img src="res/archlight.png" alt="archlight"">
+						<input type="checkbox" onchange="refValues(1, 'check1')" id="check1">
+					</div>
+					<div class="robotdiv">
+						<img src="res/fang.png" alt="fang">
+						<input type="checkbox" onchange="refValues(3, 'check3')" id="check3">
+					</div>
+					<div class="robotdiv">
+						<img src="res/marksman.png" alt="marksman">
+						<input type="checkbox" onchange="refValues(5, 'check5')" id="check5">
+					</div>
+					<div class="robotdiv">
+						<img src="res/mustang.png" alt="mustang">
+						<input type="checkbox" onchange="refValues(7, 'check7')" id="check7">
+					</div>
+					<div class="robotdiv">
+						<img src="res/phoenix.png" alt="phoenix">
+						<input type="checkbox" onchange="refValues(9, 'check9')" id="check9">
+					</div>
+					<div class="robotdiv">
+						<img src="res/sledgehammer.png" alt="sledgehammer">
+						<input type="checkbox" onchange="refValues(11, 'check11')" id="check11">
+					</div>
+					<div class="robotdiv">
+						<img src="res/stormcaller.png" alt="stormcaller">
+						<input type="checkbox" onchange="refValues(13, 'check13')" id="check13">
+					</div>
+					<div class="robotdiv">
+						<img src="res/wasp.png" alt="wasp" id="clickablewasp">
+						<input type="checkbox" onchange="refValues(15, 'check15')" id="check15">
+					</div>
+				</div>
+
+				<div class="container" id="bottomcontainer">
+					<div class="robotdiv">
+						<img src="res/crawler.png" alt="crawler" id="clickablecrawler">
+						<input type="checkbox" onchange="refValues(2, 'check2')" id="check2">
+					</div>
+					<div class="robotdiv">
+						<img src="res/fortress.png" alt="fortress" id="clickablefortress">
+						<input type="checkbox" onchange="refValues(4, 'check4')" id="check4">
+					</div>
+					<div class="robotdiv">
+						<img src="res/meltingpoint.png" alt="meltingpoint" id="clickablemeltingpoint">
+						<input
+							type="checkbox" onchange="refValues(6, 'check6')" id="check6">
+					</div>
+					<div class="robotdiv">
+						<img src="res/overlord.png" alt="overlord" id="clickableoverlord">
+						<input type="checkbox" onchange="refValues(8, 'check8')" id="check8">
+					</div>
+					<div class="robotdiv">
+						<img src="res/rhino.png" alt="rhino" id="clickablerhino">
+						<input type="checkbox" onchange="refValues(10, 'check10')" id="check10">
+					</div>
+					<div class="robotdiv">
+						<img src="res/steelball.png" alt="steelball" id="clickablesteelball">
+						<input type="checkbox" onchange="refValues(12, 'check12')" id="check12">
+					</div>
+					<div class="robotdiv">
+						<img src="res/vulcan.png" alt="vulcan" id="clickablevulcan">
+						<input type="checkbox" onchange="refValues(14, 'check14')" id="check14">
+					</div>
+				</div>
+
+				<div>
+					<button onclick="reset()">Reset</button>
+				</div>
+			</div>
+		</section>
+		<section class="selectorcontent">
+
+
+			<div class="tankscontainer" id="tankscontainer">
+				<div class="container" id="topcontainer">
+
+					<div class="robotdiv">
+						<img src="res/archlight.png" alt="archlight" id="clickablearchlight">
+						<p class="left pointstxt" id="strong1">0</p>
+						<p class="right pointstxt" id="weak1">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/fang.png" alt="fang" id="clickablefang">
+						<p class="left pointstxt" id="strong3">0</p>
+						<p class="right pointstxt" id="weak3">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/marksman.png" alt="marksman" id="clickablemarksman">
+						<p class="left pointstxt" id="strong5">0</p>
+						<p class="right pointstxt" id="weak5">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/mustang.png" alt="mustang" id="clickablemustang">
+						<p class="left pointstxt" id="strong7">0</p>
+						<p class="right pointstxt" id="weak7">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/phoenix.png" alt="phoenix" id="clickablephoenix">
+						<p class="left pointstxt" id="strong9">0</p>
+						<p class="right pointstxt" id="weak9">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/sledgehammer.png" alt="sledgehammer" id="clickablesledgehammer">
+						<p class="left pointstxt" id="strong11">0</p>
+						<p class="right pointstxt" id="weak11">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/stormcaller.png" alt="stormcaller" id="clickablestormcaller">
+						<p class="left pointstxt" id="strong13">0</p>
+						<p class="right pointstxt" id="weak13">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/wasp.png" alt="wasp" id="clickablewasp">
+						<p class="left pointstxt" id="strong15">0</p>
+						<p class="right pointstxt" id="weak15">0</p>
+					</div>
+				</div>
+
+				<div class="container" id="bottomcontainer">
+					<div class="robotdiv">
+						<img src="res/crawler.png" alt="crawler" id="clickablecrawler">
+						<p class="left pointstxt" id="strong2">0</p>
+						<p class="right pointstxt" id="weak2">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/fortress.png" alt="fortress" id="clickablefortress">
+						<p class="left pointstxt" id="strong4">0</p>
+						<p class="right pointstxt" id="weak4">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/meltingpoint.png" alt="meltingpoint" id="clickablemeltingpoint">
+						<p class="left pointstxt" id="strong6">0</p>
+						<p class="right pointstxt" id="weak6">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/overlord.png" alt="overlord" id="clickableoverlord">
+						<p class="left pointstxt" id="strong8">0</p>
+						<p class="right pointstxt" id="weak8">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/rhino.png" alt="rhino" id="clickablerhino">
+						<p class="left pointstxt" id="strong10">0</p>
+						<p class="right pointstxt" id="weak10">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/steelball.png" alt="steelball" id="clickablesteelball">
+						<p class="left pointstxt" id="strong12">0</p>
+						<p class="right pointstxt" id="weak12">0</p>
+					</div>
+					<div class="robotdiv">
+						<img src="res/vulcan.png" alt="vulcan" id="clickablevulcan">
+						<p class="left pointstxt" id="strong14">0</p>
+						<p class="right pointstxt" id="weak14">0</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<a href="https://alvarogreg.glitch.me/" target="_blank">
+			<img src="res/logo-agreg.png" alt="AGREG">
+		</a>
+	</footer>
+</body>
+<script src="js/data.js"></script>
+<script src="js/index.js"></script>
+</html>

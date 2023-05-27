@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: url(./res/web/background.jpg)
+}
+
+header{
+	text-align: center;
+	background: url(./res/header.jpg);
+	background-size: cover;
+	background-position: 0 -80px;
+	height: 250px;
+	color: wheat;
+	display: flex;
+	align-items: end;
+	justify-content: center;
+}
+
+header>h1{
+	background-color: black;
+	width: 100%;
+}
+
+.selectorcontent{
+	display: flex;
+	justify-content: center;
+}
+
+.tankscontainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid 5px rgb(255, 81, 0);
+	width: 80%;
+	margin-top: 20px;
+}
+
+.robotdiv{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+}
+
+.container{
+	display: flex;
+}
+
+img{
+	width: 150px;
+	height: 150px;
+}
+
+input[type="checkbox"]{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+
+.pointstxt{
+	position: absolute;
+	bottom: 0;
+	width: 1em;
+	text-align: center;
+	font-size: 1.8em;
+}
+
+.left{
+	left: 0;
+	background-color: greenyellow;
+}
+
+.right{
+	right: 0;
+	background-color: red;
+}
+
+button{
+	margin-bottom: 10px;
+	background-color: firebrick;
+	color: wheat;
+	padding: 3px;
+	border-radius: 10px;
+}
+
+button:hover{
+	background: red;
+
+}
+
+/*FOOTER*/
+footer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+footer>a>img{
+	width: 40px;
+	height: 40px;
+}
