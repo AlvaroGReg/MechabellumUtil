@@ -49,7 +49,15 @@ header>h1{
 	width: 150px;
 	height: 150px;
 	margin: 10px;
+	overflow: hidden;
+	display: flex;
 }
+
+
+.divhidden{
+	display: none;
+}
+
 
 .container{
 	display: flex;

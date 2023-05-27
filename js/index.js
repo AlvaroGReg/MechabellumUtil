@@ -18,6 +18,8 @@ function refValues(id, checkB){
 		let weakValue 		 = parseInt(outPutWeak.innerHTML)
 		outPutWeak.innerHTML = checkValue ? weakValue + 1 : weakValue - 1
 	})
+
+	refVisible()
 }
 
 function reset(){
@@ -28,5 +30,26 @@ function reset(){
 		document.getElementById("check" + id).checked = false
 		document.getElementById("strong" + id).innerHTML = 0
 		document.getElementById("weak" + id).innerHTML = 0
+		document.getElementById("div" + id).classList.remove("divhidden")
+	})
+}
+
+function refVisible(){
+
+
+	minis.forEach(element => {
+
+		let divID 		= 'div' + element.id
+		let strongID 	= 'strong' + element.id
+		let weakID 		= 'weak' + element.id
+		let div 		= document.getElementById(divID)
+		let strongNum 	= document.getElementById(strongID).innerHTML
+		let weakNum 	= document.getElementById(weakID).innerHTML
+
+		if (strongNum == 0 && weakNum == 0){
+			div.classList.add("divhidden")
+		} else{
+			div.classList.remove("divhidden")
+		}
 	})
 }
